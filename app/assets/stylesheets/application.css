@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *= require owl.carousel
+ *= require owl.theme
+ *= require stroke-seven
+ *= require stroke-seven-helper
  */
