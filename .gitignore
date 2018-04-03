@@ -21,3 +21,14 @@
 /yarn-error.log
 
 .byebug_history
+.env
+
+bower_components/
+.tmp/*
+app/assets/javascripts/manager/manager_build.js
+app/assets/javascripts/manager/manager_vendor.js
+app/assets/stylesheets/manager/manager_build.css
+app/assets/stylesheets/manager/manager_vendor.css
+app/assets/stylesheets/manager/auth.css
+app/assets/stylesheets/manager/404.css
+public/assets/manager
