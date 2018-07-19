@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  category_id: 1
+  user_id: 1
+  status: 1
+  price: 
+  acreage: 
+  expiration_date: 2018-07-25 15:58:30
+  type: 1
+
+two:
+  title: MyString
+  description: MyText
+  category_id: 1
+  user_id: 1
+  status: 1
+  price: 
+  acreage: 
+  expiration_date: 2018-07-25 15:58:30
+  type: 1
