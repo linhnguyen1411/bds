@@ -18,3 +18,5 @@
  *= require stroke-seven
  *= require stroke-seven-helper
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap"

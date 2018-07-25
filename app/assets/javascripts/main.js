@@ -5,7 +5,7 @@ $(window).load(function () { // makes sure the whole site is loaded
 })
 $(document).ready(function () {
 
-    
+
     $('input').iCheck({
         checkboxClass: 'icheckbox_square-yellow',
         radioClass: 'iradio_square-yellow',
@@ -42,11 +42,11 @@ $(document).ready(function () {
         mouseDrag: false,
         transitionStyle: "fade"
                 // "singleItem:true" is a shortcut for:
-                // items : 1, 
+                // items : 1,
                 // itemsDesktop : false,
                 // itemsDesktopSmall : false,
                 // itemsTablet: false,
-                // itemsMobile : false 
+                // itemsMobile : false
     });
     $("#prop-smlr-slide_0").owlCarousel({
         navigation: false, // Show next and prev buttons

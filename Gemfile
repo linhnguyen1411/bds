@@ -10,8 +10,7 @@ gem "stroke-seven-rails"
 gem 'icheck-rails', '~> 1.0', '>= 1.0.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem "mysql2", ">= 0.3.18", "< 0.5"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -20,6 +19,11 @@ gem "font-awesome-rails"
 gem 'wow-rails'
 gem 'gmaps4rails'
 gem 'jquery-rails'
+gem "roo"
+gem 'devise'
+gem 'spreadsheet'
+gem "roo-xls"
+gem "activerecord-import"
 gem 'owlcarousel-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -42,6 +46,9 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "better_errors"
+  gem "pry-byebug"
+  gem "pry-rails"
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'

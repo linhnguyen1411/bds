@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  ward_id: 1
+  address: MyString
+  facade: 1
+  bedroom: 1
+  toilet: 1
+  livingroom: 1
+  kitchen: 1
+  furniture: 1
+  floor: 1
+
+two:
+  product_id: 1
+  ward_id: 1
+  address: MyString
+  facade: 1
+  bedroom: 1
+  toilet: 1
+  livingroom: 1
+  kitchen: 1
+  furniture: 1
+  floor: 1
