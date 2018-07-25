@@ -1,5 +1,5 @@
 class Province < ApplicationRecord
-  has_many: districts
+  has_many :districts
   class << self
     def import_data file
       spreadsheet = Roo::Spreadsheet.open file
