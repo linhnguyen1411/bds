@@ -13,7 +13,11 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require wow
+//= require owl.carousel
+//= require_tree ./homes
+//= require bootstrap-sprockets
+//= require icheck
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
