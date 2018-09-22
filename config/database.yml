@@ -2,21 +2,21 @@ default: &default
   adapter: mysql2
   pool: 5
   username: root
-  password: linhnguyen1411
-  socket: /var/run/mysqld/mysqld.sock
+  password:
+  socket: /tmp/mysql.sock
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
 
 development:
   <<: *default
-  database: realty_development
+  database: realty_v1_development
 
 test:
   <<: *default
-  database: realty_test
+  database: realty_v1_test
 
 production:
   <<: *default
-  database: realty_production
+  database: realty_v1_production
   username: linhnguyen1411
   password:

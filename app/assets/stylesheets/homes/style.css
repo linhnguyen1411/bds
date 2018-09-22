@@ -1732,7 +1732,8 @@ proerty-th
     position: relative;
 }
 .proerty-th .proerty-item  .item-entry h5::after {
-    background: transparent url("chevron-down.png") no-repeat scroll center center;
+    background: transparent no-repeat scroll center center;
+    background-image: image-url("chevron-down.png");
     width: 15px;
     left: 20px;
     height: 7px;
@@ -2224,7 +2225,8 @@ single property page
 Welcom
 ======================================*/
 .Welcome-area{
-    background: #F3F3F3 url("welcome-bg.png") no-repeat scroll left top;
+    background: #F3F3F3 no-repeat scroll left top;
+    background-image: image-url("welcome-bg.png");
     position: relative;
 
 
@@ -2800,7 +2802,8 @@ padding-bottom: 15px;
 /*FOOOTER*/
 .footer-area{
 border-top: 1px solid #D1D1D1;
-background: #555 url("bg-footer.jpg") repeat scroll 0% 0%;
+background: #555 repeat scroll 0% 0%;
+background-image: image-url("bg-footer.jpg");
 color: #535353;
 }
 .footer{
@@ -3033,7 +3036,7 @@ padding: 10px;
     position:absolute;
     left:50%;
     top:50%;
-    background-image:url("preloader.gif");
+    background-image:image-url("preloader.gif");
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px;
