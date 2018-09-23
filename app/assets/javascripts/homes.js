@@ -11,13 +11,12 @@
 // about supported directives.
 //
 //= require turbolinks
-//= require jquery
-//= require jquery_ujs
+//= require homes/jquery.min.js
 //= require wow
 //= require owl.carousel
-//= require_tree ./homes
 //= require bootstrap-sprockets
 //= require icheck
+//= require_tree ./homes
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
