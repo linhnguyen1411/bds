@@ -1,5 +1,7 @@
 class Ward < ApplicationRecord
-  belongs_to :ward
+
+  belongs_to :district
+
   class << self
     def import_data file
       spreadsheet = Roo::Spreadsheet.open file
