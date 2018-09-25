@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   scope module: "admin", path: "admin", as: :admin do
     get "/dashboard", to: "dashboards#index"
+    resources :product_types
   end
 end

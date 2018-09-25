@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require admin/jquery-1.11.1.min.js
 //= require plugin/lodash.min.js
+//= require constant
 //= require plugin/toastr.min.js
 //= require admin/bootstrap.min.js
 //= require plugin/moment.min
