@@ -1,0 +1,40 @@
+<div id="page-content" ng-controller="ProductTypesController as vm" ng-init="vm.init()">
+  <div class="content-header">
+    <div class="header-section">
+      <div class="row">
+        <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+          <h1>List of Product Types<br><small>You Look Awesome!</small></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-title">
+      <h2><strong>Chả có con mịa gì ở đây cả</strong></h2>
+    </div>
+    <p>Danh sách các loại bất động sản</p>
+    <div class="table-responsive">
+      <table class="table table-vcenter table-striped">
+        <thead>
+          <tr>
+            <th style="width: 50px;" class="text-center">Id</th>
+            <th>Name</th>
+            <th style="width: 150px;" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="product_type in vm.product_types">
+            <td class="text-center">{{product_type.id}}</td>
+            <td><a href="#">{{product_type.name}}</a></td>
+            <td class="text-center">
+              <div class="btn-group btn-group-xs">
+                <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

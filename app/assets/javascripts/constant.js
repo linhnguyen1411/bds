@@ -1,0 +1,1 @@
+var HIDDEN_PARAM_METHODS = ["POST", "PUT"];
