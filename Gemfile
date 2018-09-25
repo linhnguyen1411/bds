@@ -25,7 +25,12 @@ gem 'spreadsheet'
 gem "roo-xls"
 gem "activerecord-import"
 gem 'owlcarousel-rails'
-
+gem "themify-icons-rails" , github: "scratch-soft/themify-icons-rails"
+gem "flag-icons-rails"
+gem "carrierwave", "~> 1.0"
+gem "material_icons"
+gem "config"
+gem "figaro"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

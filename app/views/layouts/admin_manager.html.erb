@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecoinomic</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'admin_manager', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin_manager', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body ng-app="adminApp" ng-strict-di>
+    <div class="preloader themed-background">
+      <h1 class="push-top-bottom text-light text-center"><strong>Pro</strong>UI</h1>
+      <div class="inner">
+        <h3 class="text-light visible-lt-ie9 visible-lt-ie10"><strong>Loading..</strong></h3>
+        <div class="preloader-spinner hidden-lt-ie9 hidden-lt-ie10"></div>
+      </div>
+    </div>
+    <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
+      <%= render "layouts/admins/sidebar_alt" %>
+      <%= render "layouts/admins/sidebar" %>
+      <div id="main-container">
+        <%= render "layouts/admins/header" %>
+        <%= yield %>
+        <%= render "layouts/admins/footer" %>
+      </div>
+      <a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
+      <%= render "layouts/admins/user_setting_modal" %>
+    </div>
+    <%= javascript_include_tag 'ng_admin' %>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.pd-bot-15 {
+  padding-bottom: 15px;
+}
+.stage-info {
+  padding-top: 5px;
+  padding-left: 10px!important;
+}
+.price {
+  padding-left: 0px;
+
+  [class*="col-"] {
+    padding-left: 0px;
+  }
+}
+.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+  cursor: none;
+}
+.border-bottom-none {
+  border-bottom: none !important;
+}
+.change-image {
+  .help-block {
+    color: red;
+  }
+}
+
+.ohh_img_about {
+  max-width: 510px;
+  max-height: 411px;
+}
+
+.ohh_img_solution_top {
+  max-width: 384px;
+  max-height: 372px;
+}
+
+.ohh_img_solution_bot {
+  max-width: 384px;
+  max-height: 410px;
+}
+
+.ohh_img_document {
+  max-width: 370px;
+  max-height: 483px;
+}
+
+.ohh_img_app {
+  max-width: 540px;
+  max-height: 482px;
+}
+
+.ohh_img_about_coin {
+  max-width: 284px;
+  max-height: 372px;
+}
+
+.ohh_img_token_stats {
+  max-width: 490px;
+  max-height: 484px;
+}
