@@ -1,2 +1,0 @@
-class ProductSpecial < ApplicationRecord
-end

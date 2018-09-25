@@ -1,5 +1,6 @@
 class District < ApplicationRecord
-  has_many :ward
+
+  has_many :wards
   belongs_to :province
  class << self
     def import_data file

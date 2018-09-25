@@ -1,4 +1,5 @@
 class Province < ApplicationRecord
+
   has_many :districts
   class << self
     def import_data file

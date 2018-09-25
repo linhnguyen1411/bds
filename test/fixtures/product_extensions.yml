@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  terrace: false
+  waterfront: false
+  view: MyString
+  garage: 1
+  pool: 1
+
+two:
+  product_id: 1
+  terrace: false
+  waterfront: false
+  view: MyString
+  garage: 1
+  pool: 1
