@@ -5,7 +5,9 @@ vi:
         login_title: "Đăng kí tài khoản"
         btn: "Đăng kí"
         btn_login: "Đăng nhập"
+        have_account: "Đã có tài khoản?"
     sessions:
       new:
         btn: "Đăng nhập"
         title: "Đăng nhập"
+        not_have_account: "Chưa có tài khoản?"

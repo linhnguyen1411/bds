@@ -13,6 +13,8 @@
       <h2><strong>Chả có con mịa gì ở đây cả</strong></h2>
     </div>
     <p>Danh sách các loại bất động sản</p>
+    <button data-target="#add-new-product-types" data-toggle="modal" class="btn btn-sm btn-primary">
+      <i class="fa fa-plus"></i> Add</button>
     <div class="table-responsive">
       <table class="table table-vcenter table-striped">
         <thead>
@@ -28,8 +30,8 @@
             <td><a href="#">{{product_type.name}}</a></td>
             <td class="text-center">
               <div class="btn-group btn-group-xs">
-                <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                <a ng-click="vm.showData(product_type.id)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                <a ng-click="vm.destroyData(product_type.id)" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
               </div>
             </td>
           </tr>
@@ -37,4 +39,5 @@
       </table>
     </div>
   </div>
+  <%= render "modal_product_types" %>
 </div>
