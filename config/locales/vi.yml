@@ -2,7 +2,7 @@ vi:
   users:
     registrations:
       new:
-        login_title: "Đăng kí tài khoản"
+        title: "Đăng kí tài khoản"
         btn: "Đăng kí"
         btn_login: "Đăng nhập"
         have_account: "Đã có tài khoản?"
@@ -11,3 +11,15 @@ vi:
         btn: "Đăng nhập"
         title: "Đăng nhập"
         not_have_account: "Chưa có tài khoản?"
+    passwords:
+      new:
+        btn: "Xác nhận"
+        title: "Quên mật khẩu"
+      edit:
+        btn: "Xác nhận"
+        title: "Đặt lại mật khẩu"
+      create:
+        not_found: "Địa chỉ email không tồn tại."
+        success: "Email hướng dẫn đặt lại mật khẩu đã được gửi đến địa chỉ emal mà bạn đã đăng ký. Vui lòng kiểm tra email của bạn để xem liệu bạn đã nhận được email từ chúng tôi hay chưa. Vui lòng liên hệ hỗ trợ nếu bạn không nhận được bất kỳ email nào."
+      update:
+        not_found: "Không tìm thấy tài khoản, vui lòng kiểm tra lại email."
