@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :admins
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {registrations: "user/registrations",
+    sessions: "user/sessions", passwords: "user/passwords"}
+
+  devise_scope :user do
+    get "login", to: "user/sessions#new"
+    get "logout", to: "user/sessions#destroy"
+    get "register", to: "user/registrations#new"
+  end
+
   root "homes/homepages#index"
 
   scope module: "admin", path: "admin", as: :admin do

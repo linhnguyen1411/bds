@@ -1,0 +1,19 @@
+vi:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "%{attribute} đã được sử dụng."
+              blank: "%{attribute} không được để trống."
+            name:
+              too_short: "%{attribute} phải dài hơn 6 kí tự."
+              too_long: "%{attribute} phải nhỏ hơn 20 kí tự."
+              blank: "%{attribute} không được để trống."
+            password:
+              too_short: "%{attribute} phải dài hơn 6 kí tự."
+              blank: "%{attribute} không được để trống."
+            password_confirmation:
+              confirmation: "%{attribute} xác nhận không đúng."
+              blank: "%{attribute} không được để trống."

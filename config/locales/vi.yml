@@ -1,0 +1,11 @@
+vi:
+  users:
+    registrations:
+      new:
+        login_title: "Đăng kí tài khoản"
+        btn: "Đăng kí"
+        btn_login: "Đăng nhập"
+    sessions:
+      new:
+        btn: "Đăng nhập"
+        title: "Đăng nhập"
