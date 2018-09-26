@@ -16,6 +16,8 @@
 //= require owl.carousel
 //= require bootstrap-sprockets
 //= require icheck
+//= require plugin/ajax_errors
+//= require plugin/lodash.min
 //= require_tree ./homes
 
 $(document).ready(function(){

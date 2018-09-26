@@ -1,0 +1,8 @@
+vi:
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Mật khẩu xác nhận"
