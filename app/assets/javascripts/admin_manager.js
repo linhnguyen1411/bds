@@ -20,4 +20,5 @@
 //= require plugin/moment.min
 //= require plugin/bootstrap-datetimepicker
 //= require plugin/toastr.min.js
+//= require sweetalert
 //= require_tree ./admin
