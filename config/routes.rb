@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
   devise_for :users, controllers: {registrations: "user/registrations",
     sessions: "user/sessions", passwords: "user/passwords"}
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
   scope module: "admin", path: "admin", as: :admin do
     get "/dashboard", to: "dashboards#index"
     resources :product_types
+    resources :products
   end
 end
