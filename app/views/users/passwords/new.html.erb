@@ -1,16 +1,38 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="page-head-content">
+        <h1 class="page-title">Forgot password </h1>
+      </div>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+</div>
+<div class="register-area" style="background-color: rgb(249, 249, 249);">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="box-for overflow">
+        <div class="col-md-12 col-xs-12 login-blocks">
+          <h2><%= t ".title" %></h2>
+          <%= form_for resource, as: resource_name, url: password_path(resource_name), html: {id: "form-forgot-pass"} do |f| %>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control",
+                id: "user-login-email" %>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-default btn-lock"> <%= t ".btn" %></button>
+            </div>
+          <% end %>
+          <br>
+          <h2><%= t "users.sessions.new.title" %> :  </h2>
+          <p>
+            <button class="login-social" onclick="window.location.href = '<%= login_path %>'">
+              <%= t "users.sessions.new.title" %></button>
+            <button class="login-social" onclick="window.location.href = '<%= register_path %>'">
+              <%= t "users.registrations.new.title" %></button>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

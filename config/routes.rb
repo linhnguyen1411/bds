@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "login", to: "user/sessions#new"
     get "logout", to: "user/sessions#destroy"
     get "register", to: "user/registrations#new"
+    get "forgot_password", to: "user/passwords#new"
   end
 
   root "homes/homepages#index"

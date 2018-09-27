@@ -18,7 +18,7 @@ function addErrorToInput($inputElement, errorMessage) {
   $("<span class='help-block'>" + errorMessage + "</span>").insertAfter($inputElement);
 }
 
-function ajaxCall(actionURL, method, data, btnLockElm) {
+function ajaxJsCall(actionURL, method, data, elm) {
   $.ajax({
     url: actionURL,
     method: method,
@@ -27,11 +27,17 @@ function ajaxCall(actionURL, method, data, btnLockElm) {
     processData: false,
     contentType: false,
     success: function(res) {
-      setTimeOutSubmit(btnLockElm);
+      setTimeOutSubmit(elm);
       if (res.status) {
-        location.href = res.redirect_page;
+        if (!_.isUndefined(res.redirect_page))
+          location.href = res.redirect_page;
+        else
+          $(elm).html(res.message_success);
       } else {
-        addErrors(res);
+        if (!_.isEmpty(JSON.parse(res.errors)))
+          addErrors(res);
+        else
+          $(elm).html(res.message_error);
       }
     }
   });
