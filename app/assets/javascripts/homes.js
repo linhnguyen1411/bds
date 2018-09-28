@@ -12,6 +12,7 @@
 //
 //= require turbolinks
 //= require homes/jquery.min.js
+//= require ckeditor/init
 //= require wow
 //= require owl.carousel
 //= require bootstrap-sprockets

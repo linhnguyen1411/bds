@@ -11,13 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree ./homes
- *= require_self
  *= require font-awesome
  *= require owl.carousel
  *= require owl.theme
  *= require stroke-seven
  *= require stroke-seven-helper
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
  @import "icheck/square/_all";

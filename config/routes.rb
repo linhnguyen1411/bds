@@ -19,4 +19,8 @@ Rails.application.routes.draw do
     resources :product_types
     resources :products
   end
+
+  scope module: "homes" do
+    resources :products
+  end
 end
