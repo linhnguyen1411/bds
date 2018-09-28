@@ -7,7 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :description
       t.integer :status
-      t.string :price,
+      t.string :price
       t.float :acreage
       t.integer :province_id
       t.integer :district_id

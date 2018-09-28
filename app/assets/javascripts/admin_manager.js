@@ -22,6 +22,7 @@
 //= require plugin/moment.min
 //= require plugin/bootstrap-datetimepicker
 //= require sweetalert
+//= require plugin/ajax_errors
 //= require_tree ./admin
 
 $(function(){ FormsWizard.init(); });

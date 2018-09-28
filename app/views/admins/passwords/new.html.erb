@@ -1,0 +1,30 @@
+<div class="login-title text-center">
+  <h1><i class="gi gi-flash"></i>Reset password</h1>
+</div>
+<div class="block push-bit">
+<%= form_for(resource, as: resource_name, url: password_path(resource_name),
+  html: {method: :post, class: "form-horizontal form-bordered form-control-borderless",
+    id: "form-reminder"}) do |f| %>
+  <div class="form-group">
+    <div class="col-xs-12">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",
+          class: "form-control input-lg", placeholder: "Email" %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group form-actions">
+    <div class="col-xs-12 text-right">
+      <button type="submit" class="btn btn-sm btn-primary btn-lock">
+        <i class="fa fa-angle-right"></i> Reset Password
+      </button>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12 text-center">
+      <small>Did you remember your password?</small>
+      <a href="<%= admin_login_path %>"><small>Login</small></a>
+    </div>
+  </div>
+<% end %>
