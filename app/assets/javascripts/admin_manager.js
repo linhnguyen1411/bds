@@ -13,12 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require admin/jquery-1.11.1.min.js
+//= require ckeditor/init
+//= require turbolinks
 //= require plugin/lodash.min.js
 //= require constant
 //= require plugin/toastr.min.js
 //= require admin/bootstrap.min.js
 //= require plugin/moment.min
 //= require plugin/bootstrap-datetimepicker
-//= require plugin/toastr.min.js
 //= require sweetalert
 //= require_tree ./admin
+
+$(function(){ FormsWizard.init(); });
+CKEDITOR.config.customConfig = '/assets/ckeditor/config.js';
