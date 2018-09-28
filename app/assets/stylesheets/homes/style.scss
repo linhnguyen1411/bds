@@ -1088,8 +1088,8 @@ font-weight: 500;
 page-header
 ======================================================*/
 .page-head{
-    background: #494C53 image-url("page-header.jpg")
-        no-repeat scroll center top / cover;
+    background: #494C53 no-repeat scroll center top / cover;
+    background-image: image-url("page-header.jpg");
     color:#FFF;
     position: relative;
     min-height: 140px;
@@ -1732,8 +1732,7 @@ proerty-th
     position: relative;
 }
 .proerty-th .proerty-item  .item-entry h5::after {
-    background: transparent no-repeat scroll center center;
-    background-image: image-url("chevron-down.png");
+    background: transparent url("../../assets/img/chevron-down.png") no-repeat scroll center center;
     width: 15px;
     left: 20px;
     height: 7px;
@@ -3036,7 +3035,7 @@ padding: 10px;
     position:absolute;
     left:50%;
     top:50%;
-    background-image:image-url("preloader.gif");
+    background-image:url(../../assets/img/preloader.gif);
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px;
