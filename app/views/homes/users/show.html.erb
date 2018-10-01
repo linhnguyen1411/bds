@@ -1,0 +1,114 @@
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="page-head-content">
+        <h1 class="page-title">Hello : <span class="orange strong"><%= current_user.name %></span></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-area user-profiel" style="background-color: #FCFCFC;"
+  ng-controller="UsersController as vm" ng-init="vm.init(<%= current_user.to_json %>)">
+&nbsp;
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 profiel-container">
+        <form id="user-information">
+          <input type="hidden" value="<%= form_authenticity_token() %>" name="authenticity_token"/>
+          <div class="profiel-header">
+            <h3>
+              <b>Cập nhật thông tin cá nhân</b><br>
+              <small>Thông tin đầy đủ sẽ khiến người khác tin tưởng vào tin rao của bạn hơn</small>
+            </h3>
+            <hr>
+          </div>
+          <div class="clear">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-1">
+                <div class="picture-container">
+                  <div class="picture">
+                    <%= image_tag "#{current_user.avatar.present? ? current_user.avatar : 'default-property.jpg'}",
+                      class: "picture-src", id: "wizardPicturePreview" %>
+                    <input type="file" ng-model="vm.user.avatar" name="user[avatar]" id="wizard-picture">
+                  </div>
+                  <h6>Click vào hình để tải lên ảnh đại diện</h6>
+                </div>
+              </div>
+              <div class="col-sm-6 padding-top-25">
+                <div class="form-group">
+                  <label>Tên đầy đủ</label>
+                  <input name="user[name]" type="text" class="form-control" ng-model="vm.user.name">
+                </div>
+                <div class="form-group">
+                  <label>Email công khai</label>
+                  <input name="user[public_email]" type="email" class="form-control"
+                    ng-model="vm.user.public_email">
+                  <small><span class="help-block">Email này là email hiển thị trên các tin đăng của bạn.(có thể dùng email đăng nhập)</span></small>
+                </div>
+                <div class="form-group">
+                  <label>Giới tính</label>
+                  <br>
+                  <% User.genders.each do |key, value| %>
+                    <div class="col-sm-4 ">
+                      <input class="form-control radio-gender" type="radio" name="user[gender]"
+                        value="<%= key %>"
+                        ng-checked="vm.user.gender == '<%= key %>'">
+                      <label class="form-check-label" for="radio-<%= value %>">
+                        <%= t "users.genders.#{key}" %>
+                      </label>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear">
+            <hr>
+            <div class="profiel-header">
+              <h4 class="center"><b>Thông tin liên hệ</b></h4>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+              <div class="form-group">
+                <label>Facebook :</label>
+                <input name="user[facebook_url]" type="text" class="form-control"
+                  ng-model="vm.user.facebook_url" placeholder="https://facebook.com/user">
+              </div>
+              <div class="form-group">
+                <label>Số điện thoại cá nhân :</label>
+                <input name="user[personal_phone]" type="text" class="form-control"
+                  ng-model="vm.user.personal_phone" placeholder="0909999999">
+              </div>
+              <div class="form-group">
+                <label>Công ty :</label>
+                <input name="user[company]" type="text" class="form-control"
+                  ng-model="vm.user.company" placeholder="Sàn BDS ABC">
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="form-group">
+                <label>Website :</label>
+                <input name="user[website]" type="text" class="form-control"
+                  ng-model="vm.user.website"  placeholder="email@rmail.com">
+              </div>
+              <div class="form-group">
+                <label>Số điện thoại công ty :</label>
+                <input name="user[company_phone]" type="text" class="form-control"
+                  ng-model="vm.user.company_phone"  placeholder="02363999999">
+              </div>
+              <div class="form-group">
+                <label>Vị trí công việc :</label>
+                <input name="user[position]" type="text" class="form-control"
+                  ng-model="vm.user.position"  placeholder="Nhân viên kinh doanh">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1">
+            <br>
+            <button type="submit" class="btn btn-finish btn-primary" id="update-user">Cập nhật</button>
+          </div>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

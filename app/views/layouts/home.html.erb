@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'homes', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body ng-app="homeApp" ng-strict-di>
     <!-- <div id="preloader">
       <div id="status">&nbsp;</div>
     </div> -->
@@ -16,5 +16,6 @@
     <%= render "homes/layouts/navbar" %>
     <%= yield %>
     <%= render "homes/layouts/footer" %>
+    <%= javascript_include_tag 'ng_home' %>
   </body>
 </html>

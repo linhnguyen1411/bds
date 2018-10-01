@@ -181,7 +181,6 @@ function validateThirdStep() {
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        debugger;
         reader.onload = function (e) {
             $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
         }

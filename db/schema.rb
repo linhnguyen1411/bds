@@ -121,8 +121,7 @@ ActiveRecord::Schema.define(version: 20180927212757) do
     t.string "title"
     t.text "description"
     t.integer "status"
-    t.float "price", limit: 24
-    t.float "double", limit: 24
+    t.string "price"
     t.float "acreage", limit: 24
     t.integer "province_id"
     t.integer "district_id"
@@ -156,15 +155,16 @@ ActiveRecord::Schema.define(version: 20180927212757) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "name"
-    t.integer "role", default: 0
     t.integer "gender", default: 0
     t.string "avatar"
-    t.string "phone"
+    t.string "personal_phone"
+    t.string "company_phone"
     t.string "public_email"
     t.string "facebook_url"
     t.string "website"
-    t.integer "company_id"
+    t.string "company"
     t.integer "status", default: 0
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

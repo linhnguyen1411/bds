@@ -27,16 +27,16 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       t.string :name
-      t.integer :role, default: 0
       t.integer :gender, default: 0
       t.string :avatar
-      t.string :phone
+      t.string :personal_phone
+      t.string :company_phone
       t.string :public_email
       t.string :facebook_url
       t.string :website
-      t.integer :company_id
+      t.string :company
       t.integer :status, default: 0
-
+      t.string :position
       t.timestamps null: false
     end
 

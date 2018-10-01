@@ -30,5 +30,7 @@ Rails.application.routes.draw do
 
   scope module: "homes" do
     resources :products
+    get "profile", to: "users#show"
+    put "profile", to: "users#update"
   end
 end

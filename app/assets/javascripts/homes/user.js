@@ -36,4 +36,44 @@ $(document).ready(function() {
       }
     });
   });
+  //User update
+  $('#user-information').on('submit', function(e) {
+    var csrfToken = $("#authenticity_token").val();
+    e.preventDefault();
+    $.ajax({
+      url: 'profile',
+      method: "PUT",
+      dataType: "json",
+      headers: {
+        'X-CSRF-Token': csrfToken
+      },
+      data: new FormData(this),
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        if (response.status) {
+          swal("Thành công", "Thay đổi thông tin thành công", "success");
+        }
+      }
+    });
+  });
+
+  function icheck(){
+    if($(".radio-gender").length > 0){
+      $(".radio-gender").each(function(){
+        var $el = $(this);
+        var skin = "_square",
+        color = "-yellow";
+        var opt = {
+          checkboxClass: 'icheckbox' + skin + color,
+          radioClass: 'iradio' + skin + color,
+        }
+        $el.iCheck(opt);
+      });
+    }
+  }
+
+  $(function(){
+    icheck();
+  })
 });

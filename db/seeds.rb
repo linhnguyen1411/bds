@@ -8,4 +8,14 @@ ProductType.create! name: "Căn hộ chung cư"
 ProductType.create! name: "Căn hộ cao cấp"
 
 puts "Create admin"
-Admin.create! email: "admin@framgia.com", password: "123456", password_confirmation: "123456"
+Admin.destroy_all
+Admin.create! email: "admin@framgia.com", password: "123123", password_confirmation: "123123"
+
+puts "Create user"
+User.destroy_all
+User.create! name: "Linh Nguyễn", email: "linhnguyendn2305@gmail.com",
+  password: "123123", password_confirmation: "123123"
+User.create! name: "Nam Đào", email: "namdao0510@gmail.com",
+  password: "123123", password_confirmation: "123123"
+User.create! name: "Đoan Kun", email: "ledinhdoan@gmail.com",
+  password: "123123", password_confirmation: "123123"
