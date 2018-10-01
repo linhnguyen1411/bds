@@ -8,7 +8,7 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( homes.css admin_manager.css )
-Rails.application.config.assets.precompile += %w( homes.js admin_manager.js ng_admin.js)
+Rails.application.config.assets.precompile += %w( homes.js admin_manager.js ng_admin.js ng_home.js)
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

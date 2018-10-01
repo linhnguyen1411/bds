@@ -19,6 +19,7 @@
 //= require icheck
 //= require plugin/ajax_errors
 //= require plugin/lodash.min
+//= require sweetalert
 //= require_tree ./homes
 
 $(document).ready(function(){

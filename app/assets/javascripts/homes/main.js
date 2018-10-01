@@ -5,14 +5,6 @@ $(window).load(function () { // makes sure the whole site is loaded
 })
 $(document).ready(function () {
 
-
-    $('input').iCheck({
-        checkboxClass: 'icheckbox_square-yellow',
-        radioClass: 'iradio_square-yellow',
-        increaseArea: '20%' // optional
-    });
-
-
     $('.layout-grid').on('click', function () {
         $('.layout-grid').addClass('active');
         $('.layout-list').removeClass('active');
