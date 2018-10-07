@@ -6,8 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 gem "bootstrap-sass", "~> 3.3.6"
-gem "stroke-seven-rails"
-gem 'icheck-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 gem "mysql2", ">= 0.3.18", "< 0.5"
@@ -16,7 +14,6 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem "font-awesome-rails"
-gem 'wow-rails'
 gem 'gmaps4rails'
 gem 'jquery-rails'
 gem "roo"
@@ -34,6 +31,7 @@ gem "figaro"
 gem 'sweetalert-rails', '~> 1.1', '>= 1.1.3'
 gem 'ckeditor'
 gem 'mini_magick'
+gem 'select2-rails', '~> 4.0', '>= 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

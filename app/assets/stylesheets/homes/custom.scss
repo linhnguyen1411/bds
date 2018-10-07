@@ -1,6 +1,24 @@
-.bg-white{
-  background-color: white!important;
+/* Add here all your css styles (customizations) */
+#carousel-ads {
+  margin-top: 0px!important;
 }
-.non-height{
-  min-height: 100px!important;
+.search-realty {
+  padding: 0px!important;
+  border-top: none!important;
+  border-left: none!important;
+  border-right: none!important;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      min-width: 30%;
+    }
+  }
+  .form-control {
+    border: 1px solid black;
+  }
+}
+
+.btn-green {
+  background-color: #72c02c!important;
 }
