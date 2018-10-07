@@ -1,6 +1,52 @@
-.bg-white{
-  background-color: white!important;
+/* Add here all your css styles (customizations) */
+#carousel-ads {
+  margin-top: 0px!important;
 }
-.non-height{
-  min-height: 100px!important;
+.search-realty {
+  padding: 0px!important;
+  border-top: none!important;
+  border-left: none!important;
+  border-right: none!important;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      min-width: 30%;
+    }
+  }
+  .form-control {
+    border: 1px solid black;
+  }
+}
+
+.btn-green {
+  background-color: #72c02c!important;
+}
+.block-product {
+  margin-bottom: 10px;
+}
+.block-news {
+  padding: 0px!important;
+  border-top: 0px!important;
+  h2 {
+    text-align: center;
+    padding-top: 5px!important;
+    padding-left: 0px!important;
+    color: white;
+    font-size: 22px;
+  }
+  ul>li {
+    padding-left: 10px!important;
+    font-size: 15px;
+  }
+  .box-header {
+    background-color: lightcoral;
+    h2 {
+      font-weight: 900px;
+    }
+  }
+}
+.block-header {
+  border-left: 5px solid red;
+
 }
