@@ -1,348 +1,431 @@
-<div class="slider-area">
-  <div class="slider">
-    <div id="bg-slider" class="owl-carousel owl-theme">
-      <div class="item"><%= image_tag "slide1/slider-image-1.jpg" %></div>
-      <div class="item"><%= image_tag "slide1/slider-image-2.jpg" %></div>
-      <div class="item"><%= image_tag "slide1/slider-image-1.jpg" %></div>
+<div class="container" ng-controller="HomepagesController as vm" ng-init="vm.init()">
+  <div class="row" style="padding-top: 30px;">
+    <div class="col-md-4 shadow-wrapper">
+      <div class="tag-box tag-box-v1 box-shadow shadow-effect-2 search-realty">
+        <div class="tab-v1">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Nhà đất bán</a></li>
+            <li><a href="#profile" data-toggle="tab">Nhà đất thuê</a></li>
+            <li><a href="#messages" data-toggle="tab">Tin tức</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nhập từ khóa">
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="search-city" placeholder="Chọn thành phố">
+                  <option></option>
+                  <option ng-repeat="province in vm.provinces" value="{{province.id}}">{{province.name}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Default select</option>
+                  <option>Default select</option>
+                  <option>Default select</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>Default select</option>
+                  <option>Default select</option>
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+            <div class="tab-pane fade in" id="profile">
+
+            </div>
+            <div class="tab-pane fade in" id="messages">
+
+            </div>
+            <button class="label label-success rounded-2x" style="font-size: 15px;">
+              <i class="fa fa-search"></i> Tìm kiếm
+            </button>
+            <a href="#" style="font-size: 15px;">
+              Tìm kiếm nâng cao
+            </a>
+            <br>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="slider-content">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-        <h2>property Searching Just Got So Easy</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
-        <div class="search-form wow pulse" data-wow-delay="0.8s">
-          <form action="" class=" form-inline">
-            <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Key word">
-            </div>
-            <div class="form-group">
-              <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
-                <% @provinces.each do |province| %>
-                  <option><%= province.name %></option>
-                <% end %>
-              </select>
-            </div>
-            <div class="form-group">
-              <select id="basic" class="selectpicker show-tick form-control">
-                <option> -Status- </option>
-                <option>Rent </option>
-                <option>Boy</option>
-                <option>used</option>
-              </select>
-            </div>
-            <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
-            <div style="display: none;" class="search-toggle">
-              <div class="search-row">
-                <div class="form-group mar-r-20">
-                  <label for="price-range">Price range ($):</label>
-                  <input type="text" class="span2" value="" data-slider-min="0"
-                    data-slider-max="600" data-slider-step="5"
-                    data-slider-value="[0,450]" id="price-range" ><br />
-                  <b class="pull-left color">2000$</b>
-                  <b class="pull-right color">100000$</b>
-                </div>
-                <!-- End of  -->
-                <div class="form-group mar-l-20">
-                  <label for="property-geo">Property geo (m2) :</label>
-                  <input type="text" class="span2" value="" data-slider-min="0"
-                    data-slider-max="600" data-slider-step="5"
-                    data-slider-value="[50,450]" id="property-geo" ><br />
-                  <b class="pull-left color">40m</b>
-                  <b class="pull-right color">12000m</b>
-                </div>
-                <!-- End of  -->
-              </div>
-              <div class="search-row">
-                <div class="form-group mar-r-20">
-                  <label for="price-range">Min baths :</label>
-                  <input type="text" class="span2" value="" data-slider-min="0"
-                    data-slider-max="600" data-slider-step="5"
-                    data-slider-value="[250,450]" id="min-baths" ><br />
-                  <b class="pull-left color">1</b>
-                  <b class="pull-right color">120</b>
-                </div>
-                <!-- End of  -->
-                <div class="form-group mar-l-20">
-                  <label for="property-geo">Min bed :</label>
-                  <input type="text" class="span2" value="" data-slider-min="0"
-                    data-slider-max="600" data-slider-step="5"
-                    data-slider-value="[250,450]" id="min-bed" ><br />
-                  <b class="pull-left color">1</b>
-                  <b class="pull-right color">120</b>
-                </div>
-                <!-- End of  -->
-              </div>
-              <br>
-              <div class="search-row">
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Fire Place(3100)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Dual Sinks(500)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Hurricane Shutters(99)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-              </div>
-              <div class="search-row">
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Swimming Pool(1190)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> 2 Stories(4600)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Emergency Exit(200)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-              </div>
-              <div class="search-row">
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Laundry Room(10073)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Jog Path(1503)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <div class="form-group">
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> 26' Ceilings(1200)
-                    </label>
-                  </div>
-                </div>
-                <!-- End of  -->
-                <br>
-                <hr>
-              </div>
-              <button class="btn search-btn prop-btm-sheaerch" type="submit"><i class="fa fa-search"></i></button>
-            </div>
-          </form>
+    <div class="col-md-8">
+      <div id="carousel-ads" class="carousel slide testimonials testimonials-v2">
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag "800x290x1.png" %>
+          </div>
+          <div class="item">
+            <%= image_tag "800x290x2.png" %>
+          </div>
+          <div class="item">
+            <%= image_tag "800x290x3.png" %>
+          </div>
+        </div>
+        <div class="carousel-arrow">
+          <a class="left carousel-control" href="#carousel-ads" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="right carousel-control" href="#carousel-ads" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
-  <div class="container">
-    <div class="col-md-11">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
-          <!-- /.feature title -->
-          <h2>Top submitted property</h2>
-          <p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies . </p>
+  <div class="heading heading-v2" style="padding-bottom: 0px;">
+    <h2>Các tin vừa đăng</h2>
+  </div>
+  <div class="col-md-12">
+    <div id="carousel-hot-product" class="carousel slide testimonials testimonials-v2">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnails thumbnail-style thumbnail-kenburn">
+                <div class="thumbnail-img">
+                  <div class="overflow-hidden">
+                    <%= image_tag "product-thumb-default.jpg", class: "img-responsive" %>
+                  </div>
+                  <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
+                </div>
+                <div class="caption">
+                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <ul>
+                    <li>Diện tích: 100m2</li>
+                    <li>Giá: Liên hệ</li>
+                    <li>Hoàng Sa, Đà Nẵng</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-arrow">
+          <a class="left carousel-control" href="#carousel-hot-product" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="right carousel-control" href="#carousel-hot-product" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+          </a>
         </div>
       </div>
-      <div class="row">
-        <div class="proerty-th">
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-1.html" ><%= image_tag "demo/property-1.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-1.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-2.html" ><%= image_tag "demo/property-2.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-2.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-3.html" ><%= image_tag "demo/property-3.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-3.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-1.html" ><%= image_tag "demo/property-4.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-1.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-3.html" ><%= image_tag "demo/property-2.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-3.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-2.html" ><%= image_tag "demo/property-4.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-2.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-two proerty-item">
-              <div class="item-thumb">
-                <a href="property-1.html" ><%= image_tag "demo/property-3.jpg" %></a>
-              </div>
-              <div class="item-entry overflow">
-                <h5><a href="property-1.html" >Super nice villa </a></h5>
-                <div class="dot-hr"></div>
-                <span class="pull-left"><b>Area :</b> 120m </span>
-                <span class="proerty-price pull-right">$ 300,000</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 p0">
-            <div class="box-tree more-proerty text-center">
-              <div class="item-tree-icon">
-                <i class="fa fa-th"></i>
-              </div>
-              <div class="more-entry overflow">
-                <h5><a href="property-1.html" >CAN'T DECIDE ? </a></h5>
-                <h5 class="tree-sub-ttl">Show all properties</h5>
-                <button class="btn border-btn more-black" value="All properties">All properties</button>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+  <div class="heading heading-v2" style="padding-bottom: 0px;">
+    <h2>Các tin được quan tâm nhiều</h2>
+  </div>
+  <div class="col-md-8">
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
       </div>
     </div>
-    <div class="col-md-1">
-      something here
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-right">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
     </div>
   </div>
-</div>
-<div class="count-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
-        <!-- /.feature title -->
-        <h2>You can trust Us </h2>
+  <div class="col-md-4">
+    <div class="tag-box tag-box-v2 box-shadow shadow-effect-1 block-news">
+      <div class="box-header">
+        <h2>Tin nóng</h2>
       </div>
+      <ul class="list-unstyled">
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Vì sao chúng ta nên mua đất hòa xuân</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Nhiều nhà đầu tư đổ xô mua đất xây căn hộ cao cấp</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Cách trang trí phòng làm việc cho người tuổi Ngọ hợp phong thủy</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">10 Phong cách thiết kế vừa đương đại vừa mang đậm chất truyền thống</a></li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="col-md-12 col-xs-12 percent-blocks m-main" data-waypoint-scroll="true">
-        <div class="row">
-          <div class="col-sm-3 col-xs-6">
-            <div class="count-item">
-              <div class="count-item-circle">
-                <span class="pe-7s-users"></span>
-              </div>
-              <div class="chart" data-percent="5000">
-                <h2 class="percent" id="counter">0</h2>
-                <h5>HAPPY CUSTOMER </h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="count-item">
-              <div class="count-item-circle">
-                <span class="pe-7s-home"></span>
-              </div>
-              <div class="chart" data-percent="12000">
-                <h2 class="percent" id="counter1">0</h2>
-                <h5>Properties in stock</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="count-item">
-              <div class="count-item-circle">
-                <span class="pe-7s-flag"></span>
-              </div>
-              <div class="chart" data-percent="120">
-                <h2 class="percent" id="counter2">0</h2>
-                <h5>City registered </h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-xs-6">
-            <div class="count-item">
-              <div class="count-item-circle">
-                <span class="pe-7s-graph2"></span>
-              </div>
-              <div class="chart" data-percent="5000">
-                <h2 class="percent"  id="counter3">5000</h2>
-                <h5>DEALER BRANCHES</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="tag-box tag-box-v2 box-shadow shadow-effect-1 block-news">
+      <div class="box-header">
+        <h2>Tin nóng</h2>
       </div>
+      <ul class="list-unstyled">
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Vì sao chúng ta nên mua đất hòa xuân</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Nhiều nhà đầu tư đổ xô mua đất xây căn hộ cao cấp</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Cách trang trí phòng làm việc cho người tuổi Ngọ hợp phong thủy</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">10 Phong cách thiết kế vừa đương đại vừa mang đậm chất truyền thống</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="block-header">
+      <h2>Nhà đất bán</h2>
     </div>
   </div>
 </div>

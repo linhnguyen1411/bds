@@ -10,18 +10,26 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
-//= require homes/jquery.min.js
 //= require ckeditor/init
-//= require wow
 //= require owl.carousel
-//= require bootstrap-sprockets
-//= require icheck
 //= require plugin/ajax_errors
 //= require plugin/lodash.min
 //= require sweetalert
+//= require homes/jquery.cubeportfolio.min
+//= require homes/jquery.masonry.min
+//= require homes/ladda.min
+//= require homes/imagesloaded.min
+//= require constant
 //= require_tree ./homes
+//= require select2-full
 
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+  App.init();
+  OwlCarousel.initOwlCarousel();
+  $('#search-city').select2({
+    placeholder: "Chọn thành phố"
+  });
+})

@@ -8,14 +8,13 @@
     <%= javascript_include_tag 'homes', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body ng-app="homeApp" ng-strict-di>
-    <!-- <div id="preloader">
-      <div id="status">&nbsp;</div>
-    </div> -->
-    <%= render "homes/layouts/header" %>
-    <%= render "homes/layouts/navbar" %>
-    <%= yield %>
-    <%= render "homes/layouts/footer" %>
+  <body ng-app="homeApp" class="header-fixed header-fixed-space-default" ng-strict-di
+    style="margin-bottom: 0px;">
+    <div class="wrapper">
+      <%= render "homes/layouts/header" %>
+      <%= yield %>
+      <%= render "homes/layouts/footer" %>
+    </div>
     <%= javascript_include_tag 'ng_home' %>
   </body>
 </html>
