@@ -20,7 +20,11 @@
           <li class="topbar-devider"></li>
           <li><a href="page_faq.html">Help</a></li>
           <li class="topbar-devider"></li>
-          <li><a href="page_login.html">Login</a></li>
+          <% if current_user.present? %>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+            <li><a href="/login">Login</a></li>
+          <% end %>
         </ul>
       </div>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
