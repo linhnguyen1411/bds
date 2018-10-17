@@ -9,7 +9,7 @@
 //= require_tree ./authenticate
 //= require homes/app.js
 
-jQuery(document).ready(function() {
+var ready = function (){
   App.init();
   $.backstretch([
     "/assets/bg/19.jpg",
@@ -18,4 +18,5 @@ jQuery(document).ready(function() {
       fade: 1000,
       duration: 7000
   });
-});
+};
+$(document).on('turbolinks:load', ready);
