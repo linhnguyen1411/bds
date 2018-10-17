@@ -24,6 +24,7 @@
 //= require homes/imagesloaded.min
 //= require constant
 //= require_tree ./homes
+//= require homes/datepicker.js
 //= require select2-full
 
 $(document).ready(function(){
@@ -33,4 +34,6 @@ $(document).ready(function(){
   $('#search-city').select2({
     placeholder: "Chọn thành phố"
   });
+  App.initCounter();
+  App.initScrollBar();
 })
