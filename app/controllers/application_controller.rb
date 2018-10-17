@@ -7,10 +7,8 @@ class ApplicationController < ActionController::Base
   private
 
   def layout_by_resource
-    if devise_controller? && resource_name == :admin
-      "admin_unauthenticate"
-    else
-      "home"
+    if devise_controller?
+      "authenticate"
     end
   end
 
