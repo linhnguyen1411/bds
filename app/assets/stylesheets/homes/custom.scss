@@ -2,6 +2,7 @@
 #carousel-ads {
   margin-top: 0px!important;
 }
+
 .search-realty {
   padding: 0px!important;
   border-top: none!important;
@@ -21,4 +22,62 @@
 
 .btn-green {
   background-color: #72c02c!important;
+}
+
+.block-product {
+  margin-bottom: 10px;
+}
+
+.block-news {
+  padding: 0px!important;
+  border-top: 0px!important;
+  h2 {
+    text-align: center;
+    padding-top: 5px!important;
+    padding-left: 0px!important;
+    color: white;
+    font-size: 22px;
+  }
+  ul>li {
+    padding-left: 10px!important;
+    font-size: 15px;
+  }
+  .box-header {
+    background-color: lightcoral;
+    h2 {
+      font-weight: 900px;
+    }
+  }
+}
+
+.block-header {
+  height: 3em;
+  border-left: 6px double red;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+  h2 {
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+}
+
+.home-title {
+  color: lightcoral!important;
+    font-weight: bold!important;
+}
+.home-button {
+  right: 100px;
+  top: 65px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 555555;
+  position: fixed;
+  padding: 9px 10px;
+  border-radius: 3px 0 0 3px !important;
+  button {
+    border-radius: 20px!important;
+  }
 }

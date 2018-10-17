@@ -2085,7 +2085,8 @@
   padding: 100px 0;
   position: relative;
   text-align: center;
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background-image: image-url("team/faces.jpg");
+  background: 50% 0 repeat fixed;
 }
 
 .parallax-quote:after {
@@ -2105,7 +2106,8 @@
   height: 100%;
   content: " ";
   position: absolute;
-  background: url(../img/patterns/gridtile.png) repeat;
+  background: repeat;
+  background-image: image-url("gridtile.png")
 }
 
 /*Parallax Quote Inner*/
@@ -2193,7 +2195,8 @@
     [15. Parallax Team]
 ----------------------------------------------------*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background-image: image-url("team/faces.jpg");
+  background: 50% 5 repeat fixed!important;
 }
 
 .parallax-team,
@@ -2214,7 +2217,8 @@
 
 /*Parallax Team*/
 .parallax-team {
-  background: url(../img/team/faces.jpg) 50% 0 repeat fixed;
+  background-image: image-url("team/faces.jpg");
+  background: 50% 5 repeat fixed!important;
 }
 
 .parallax-team,

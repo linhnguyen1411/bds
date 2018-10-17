@@ -28,6 +28,7 @@
 
 $(document).ready(function(){
   App.init();
+  App.initParallaxBg();
   OwlCarousel.initOwlCarousel();
   $('#search-city').select2({
     placeholder: "Chọn thành phố"

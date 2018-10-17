@@ -4,9 +4,9 @@
       <div class="tag-box tag-box-v1 box-shadow shadow-effect-2 search-realty">
         <div class="tab-v1">
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-            <li><a href="#profile" data-toggle="tab">Profile</a></li>
-            <li><a href="#messages" data-toggle="tab">Messages</a></li>
+            <li class="active"><a href="#home" data-toggle="tab">Nhà đất bán</a></li>
+            <li><a href="#profile" data-toggle="tab">Nhà đất thuê</a></li>
+            <li><a href="#messages" data-toggle="tab">Tin tức</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade in active" id="home">
@@ -40,6 +40,13 @@
             <div class="tab-pane fade in" id="messages">
 
             </div>
+            <button class="label label-success rounded-2x" style="font-size: 15px;">
+              <i class="fa fa-search"></i> Tìm kiếm
+            </button>
+            <a href="#" style="font-size: 15px;">
+              Tìm kiếm nâng cao
+            </a>
+            <br>
           </div>
         </div>
       </div>
@@ -69,7 +76,7 @@
     </div>
   </div>
   <div class="heading heading-v2" style="padding-bottom: 0px;">
-    <h2>Các tin vừa đăng</h2>
+    <h2 class="home-title">Các tin vừa đăng</h2>
   </div>
   <div class="col-md-12">
     <div id="carousel-hot-product" class="carousel slide testimonials testimonials-v2">
@@ -307,42 +314,517 @@
         </div>
       </div>
   </div>
-  <div class="row">
-    <div class="col-md-8">
-      <div class="tab-v1">
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-          <li><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#messages" data-toggle="tab">Messages</a></li>
-          <li><a href="#settings" data-toggle="tab">Settings</a></li>
+  <div class="heading heading-v2" style="padding-bottom: 0px;">
+    <h2 class="home-title">Các tin được quan tâm nhiều</h2>
+  </div>
+  <div class="col-md-8">
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
         </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="home">
-            <div class="row">
-              <div class="col-md-4">
-                <img alt="" class="img-responsive img-tab-space" src="assets/img/main/img10.jpg">
-              </div>
-              <div class="col-md-8">
-                <h4>Heading Sample 1</h4>
-                <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum <strong>ivamus imperdiet</strong> condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque <strong>fermentum vivamus</strong> imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac felis consectetur id. Donec eget orci metusvivamus imperdiet.</p>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 block-product">
+      <div class="col-md-4">
+        <%= image_tag "img12.jpg", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8">
+        <h4><strong>Tiêu đề tin đăng nó phải như thế này</strong></h4>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check color-green"></i> Giá             : 2.5 tỷ</li>
+          <li><i class="fa fa-check color-green"></i> Diện tích       : 100m2</li>
+          <li><i class="fa fa-check color-green"></i> Quận/Thành Phố  : Cẩm Lệ, Đà Nẵng</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-right">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="tag-box tag-box-v2 box-shadow shadow-effect-1 block-news">
+      <div class="box-header">
+        <h2>Tin nóng</h2>
+      </div>
+      <ul class="list-unstyled">
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Vì sao chúng ta nên mua đất hòa xuân</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Nhiều nhà đầu tư đổ xô mua đất xây căn hộ cao cấp</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Cách trang trí phòng làm việc cho người tuổi Ngọ hợp phong thủy</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">10 Phong cách thiết kế vừa đương đại vừa mang đậm chất truyền thống</a>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Vì sao chúng ta nên mua đất hòa xuân</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Nhiều nhà đầu tư đổ xô mua đất xây căn hộ cao cấp</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Cách trang trí phòng làm việc cho người tuổi Ngọ hợp phong thủy</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">10 Phong cách thiết kế vừa đương đại vừa mang đậm chất truyền thống</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tag-box tag-box-v2 box-shadow shadow-effect-1 block-news">
+      <div class="box-header">
+        <h2>Tin nóng</h2>
+      </div>
+      <ul class="list-unstyled">
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Vì sao chúng ta nên mua đất hòa xuân</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Nhiều nhà đầu tư đổ xô mua đất xây căn hộ cao cấp</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">Cách trang trí phòng làm việc cho người tuổi Ngọ hợp phong thủy</a></li>
+        <li><i class="fa fa-pencil color-green"></i> <a href="">10 Phong cách thiết kế vừa đương đại vừa mang đậm chất truyền thống</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-12 margin-bottom-40">
+    <div class="block-header project-slider">
+      <h2 class="heading-md home-title">Dự án nổi bật</h2>
+    </div>
+    <div class="owl-carousel-style-v2">
+      <div class="owl-slider-v3">
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project One</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
           </div>
-          <div class="tab-pane fade in" id="profile">
-            <img alt="" class="pull-left lft-img-margin img-width-200" src="assets/img/main/img20.jpg">
-            <h4>Heading Sample 2</h4>
-            <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum <strong>ac adipiscing nunc.</strong> Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Pellentesque fermentum, ante ac interdum id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac <strong>interdum ullamcorper.</strong></p>
+        </div>
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project Two</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
           </div>
-          <div class="tab-pane fade in" id="messages">
-            <h4>Heading Sample 3</h4>
-            <p><img alt="" class="pull-right rgt-img-margin img-width-200" src="assets/img/main/img18.jpg"> <strong>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id.</strong> Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id. Donec eget orci metus, ac adipiscing nunc. <strong>Pellentesque fermentum</strong>, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper.</p>
+        </div>
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project Three</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
           </div>
-          <div class="tab-pane fade in" id="settings">
-            <h4>Heading Sample 4</h4>
-            <p><img alt="" class="pull-right rgt-img-margin img-width-200" src="assets/img/main/img24.jpg"> Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id. Donec eget orci metus, ac adipiscing nunc. <strong>Pellentesque fermentum</strong>, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper.</p>
+        </div>
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project Four</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
+          </div>
+        </div>
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project Five</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
+          </div>
+        </div>
+        <div class="thumbnail item ">
+          <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="assets/img/main/1.jpg">
+          <span class="overlay-zoom">
+          <%= image_tag "img6.jpg", class: "img-responsive" %>
+          <span class="zoom-icon"></span>
+          </span>
+          </a>
+          <div class="caption">
+            <h3><a class="hover-effect" href="#">Project Six</a></h3>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+            <p><a href="#" class="btn-u btn-u-small">Read more</a></p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-md-12 parallax-team parallaxBg">
+    <div class="container content">
+      <div class="title-box-v2">
+        <h2>Build Your <span class="color-green">Own</span> Talents</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="row">
+        <!-- Team v2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-v2">
+            <%= image_tag "team/img1-md.jpg", class: "img-responsive" %>
+            <div class="inner-team">
+              <h3>Jack Anderson</h3>
+              <small class="color-green">CEO, Chief Officer</small>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
+              <hr>
+              <ul class="list-inline team-social">
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="fb tooltips" data-original-title="Facebook" href="#">
+                  <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="tw tooltips" data-original-title="Twitter" href="#">
+                  <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="gp tooltips" data-original-title="Google plus" href="#">
+                  <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Team v2 -->
+        <!-- Team v2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-v2">
+            <%= image_tag "team/img2-md.jpg", class: "img-responsive" %>
+            <div class="inner-team">
+              <h3>Kate Metus</h3>
+              <small class="color-green">Project Manager</small>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
+              <hr>
+              <ul class="list-inline team-social">
+                <li><a data-placement="top" data-toggle="tooltip" class="fb tooltips" data-original-title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a data-placement="top" data-toggle="tooltip" class="tw tooltips" data-original-title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a data-placement="top" data-toggle="tooltip" class="gp tooltips" data-original-title="Google plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Team v2 -->
+        <!-- Team v2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-v2">
+            <%= image_tag "team/img3-md.jpg", class: "img-responsive" %>
+            <div class="inner-team">
+              <h3>Porta Gravida</h3>
+              <small class="color-green">VP of Operations</small>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
+              <hr>
+              <ul class="list-inline team-social">
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="fb tooltips" data-original-title="Facebook" href="#">
+                  <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="tw tooltips" data-original-title="Twitter" href="#">
+                  <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="gp tooltips" data-original-title="Google plus" href="#">
+                  <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Team v2 -->
+        <!-- Team v2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-v2">
+            <%= image_tag "team/img5-md.jpg", class: "img-responsive" %>
+            <div class="inner-team">
+              <h3>Donec Elisson</h3>
+              <small class="color-green">Director, R &amp; D Talent</small>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem...</p>
+              <hr>
+              <ul class="list-inline team-social">
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="fb tooltips" data-original-title="Facebook" href="#">
+                  <i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="tw tooltips" data-original-title="Twitter" href="#">
+                  <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a data-placement="top" data-toggle="tooltip" class="gp tooltips" data-original-title="Google plus" href="#">
+                  <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Team v2 -->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 container content job-partners">
+    <div class="title-box-v2">
+      <h2><span class="color-green">Các doanh nghiệp liên kết</span></h2>
+      <p>Các đối tác chính liên kết nội dung với trang web, là các sàn bất động sản lớn, các công ty xây dựng và kiến trúc uy tín hàng đầu trong lĩnh vực.</p>
+    </div>
+    <ul class="list-inline our-clients" id="effect-2">
+      <li>
+        <figure>
+          <%= image_tag "clients2/ea-canada.png" %>
+          <div class="img-hover">
+            <h4>Ea Canada</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/inspiring.png" %>
+          <div class="img-hover">
+            <h4>Inspiring</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/ucweb.png" %>
+          <div class="img-hover">
+            <h4>UcWeb</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/clarks.png" %>
+          <div class="img-hover">
+            <h4>Clarks</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/corepreserves.png" %>
+          <div class="img-hover">
+            <h4>Core Preserves</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/finals.png" %>
+          <div class="img-hover">
+            <h4>USL Champions</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/getaround.png" %>
+          <div class="img-hover">
+            <h4>GetAround</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/baderbrau.png" %>
+          <div class="img-hover">
+            <h4>Baderbrau</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/emirates.png" %>
+          <div class="img-hover">
+            <h4>Emirates</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/fddw.png" %>
+          <div class="img-hover">
+            <h4>Field Days</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/district-karaoke.png" %>
+          <div class="img-hover">
+            <h4>District Karaoke</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/marianos.png" %>
+          <div class="img-hover">
+            <h4>Mariano's</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/grifting-tree.png" %>
+          <div class="img-hover">
+            <h4>The Grifting Tree</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/jaguar.png" %>
+          <div class="img-hover">
+            <h4>Jaguar</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/hermes.png" %>
+          <div class="img-hover">
+            <h4>Hermes</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/starbucks.png" %>
+          <div class="img-hover">
+            <h4>Starbucks</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/national-geographic.png" %>
+          <div class="img-hover">
+            <h4>National Geographic</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/much-more.png" %>
+          <div class="img-hover">
+            <h4>Much More</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/hotiron.png" %>
+          <div class="img-hover">
+            <h4>Hotiron</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/fred-perry.png" %>
+          <div class="img-hover">
+            <h4>Fred Perry</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/bellfield.png" %>
+          <div class="img-hover">
+            <h4>Bellfield</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/getapp.png" %>
+          <div class="img-hover">
+            <h4>GetApp</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/austrian-airlines.png" %>
+          <div class="img-hover">
+            <h4>Austrian Airlines</h4>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <%= image_tag "clients2/general-electric.png" %>
+          <div class="img-hover">
+            <h4>General Electronic</h4>
+          </div>
+        </figure>
+      </li>
+    </ul>
   </div>
 </div>
