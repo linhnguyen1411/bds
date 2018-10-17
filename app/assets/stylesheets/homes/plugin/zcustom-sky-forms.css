@@ -159,7 +159,7 @@
 /* toggles */
 /**/
 .sky-form .toggle {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .sky-form .toggle i {
@@ -267,8 +267,8 @@
 .sky-form .input input:focus,
 .sky-form .select select:focus,
 .sky-form .textarea textarea:focus {
- 	border-color: #bbb;
-  box-shadow: 0 0 2px #c9c9c9;	
+  border-color: #bbb;
+  box-shadow: 0 0 2px #c9c9c9;  
 }
 
 .sky-form .radio input:focus + i,
@@ -284,7 +284,7 @@
 .sky-form .input:hover input,
 .sky-form .select:hover select,
 .sky-form .textarea:hover textarea {
-	border-color: #999;
+  border-color: #999;
 }
 
 .sky-form .radio:hover i,

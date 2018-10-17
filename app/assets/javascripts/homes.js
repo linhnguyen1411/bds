@@ -37,5 +37,6 @@ var ready = function(){
   App.initCounter();
   App.initScrollBar();
   RegForm.initRegForm();
+  $('.select2').select2();
 };
 $(document).on('turbolinks:load', ready);
