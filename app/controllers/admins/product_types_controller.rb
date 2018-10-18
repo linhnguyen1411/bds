@@ -1,4 +1,4 @@
-class Admin::ProductTypesController < Admin::AdminsController
+class Admins::ProductTypesController < Admins::AdminsController
 
   before_action :load_product_type, only: [:show, :update, :destroy]
 

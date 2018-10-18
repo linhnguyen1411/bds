@@ -1,4 +1,4 @@
-class User::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   def create
     user = User.new user_params
     status = user.save

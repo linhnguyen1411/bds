@@ -1,4 +1,4 @@
-class Admin::PasswordsController < Devise::PasswordsController
+class Admins::PasswordsController < Devise::PasswordsController
   def create
     admin = Admin.find_by email: params[:admin][:email]
     admin&.send_reset_password_instructions

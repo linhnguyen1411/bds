@@ -1,4 +1,4 @@
-class User::PasswordsController < Devise::PasswordsController
+class Users::PasswordsController < Devise::PasswordsController
   def create
     user = User.find_by email: params[:user][:email]
     user&.send_reset_password_instructions
