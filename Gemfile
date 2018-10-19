@@ -32,6 +32,7 @@ gem 'sweetalert-rails', '~> 1.1', '>= 1.1.3'
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'select2-rails', '~> 4.0', '>= 4.0.3'
+gem 'dropzonejs-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

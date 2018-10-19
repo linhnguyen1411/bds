@@ -10,4 +10,6 @@ class Product < ApplicationRecord
 
   belongs_to :product_type
   belongs_to :category
+
+  enum status: {for_rent: 0, for_sale: 1, buy: 2}
 end
