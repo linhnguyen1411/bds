@@ -1,0 +1,226 @@
+<div class="col-md-9" ng-controller="ProductsController as vm">
+  <div class="tab-v1">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#home-1" data-toggle="tab">Thông tin cơ bản</a></li>
+      <li><a href="#profile-1" data-toggle="tab">Thông tin bổ sung</a></li>
+      <li><a href="#messages-1" data-toggle="tab">Thông tin nâng cao</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="home-1">
+        <form action="#" class="sky-form">
+          <header>Thông tin cơ bản</header>
+          <fieldset>
+            <!-- <section>
+              <label class="label">Loại</label>
+              <div class="row">
+                <div class="col col-4">
+                  <label class="radio state-success">
+                  <input type="radio" name="radio" checked><i class="rounded-x"></i>Bán
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="radio state-success">
+                  <input type="radio" name="radio"><i class="rounded-x"></i>Cho thuê
+                  </label>
+                </div>
+              </div>
+            </section> -->
+            <section>
+              <label class="label">Loại</label>
+              <div class="row">
+              <div class="col-md-8">
+                <label class="select select2">
+                  <select>
+                    <option value="0">Choose name</option>
+                    <option value="1">Alexandra</option>
+                    <option value="2">Alice</option>
+                    <option value="3" selected="">Anastasia</option>
+                    <option value="4">Avelina</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+            <section>
+              <label class="label">Vị trí</label>
+              <div class="row">
+              <div class="col-md-4">
+                <label class="select">
+                  <select class="select2">
+                    <option value="0">Chọn thành phố/ tỉnh</option>
+                    <option value="1">Alexandra</option>
+                    <option value="2">Alice</option>
+                    <option value="3">Anastasia</option>
+                    <option value="4">Avelina</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-md-4">
+                <label class="select">
+                  <select class="select2">
+                    <option value="0">Chọn quận/ huyện</option>
+                    <option value="1">Alexandra</option>
+                    <option value="2">Alice</option>
+                    <option value="3">Anastasia</option>
+                    <option value="4">Avelina</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-md-4">
+                <label class="select">
+                  <select class="select2">
+                    <option value="0">Chọn phường/ xã</option>
+                    <option value="1">Alexandra</option>
+                    <option value="2">Alice</option>
+                    <option value="3">Anastasia</option>
+                    <option value="4">Avelina</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+            <section>
+              <label class="label">Địa chỉ</label>
+              <label class="input">
+              <input type="text">
+              </label>
+            </section>
+          </fieldset>
+
+          <fieldset>
+            <section>
+              <label class="label">Tiêu đề</label>
+              <label class="input">
+              <input type="text">
+              </label>
+            </section>
+            <section>
+              <label class="label">Mô tả chi tiết</label>
+              <label class="textarea">
+              <textarea rows="7"></textarea>
+              </label>
+            </section>
+          </fieldset>
+
+          <fieldset>
+            <section>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="label">Giá</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="label">Diện tích</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="label">Hướng</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="label">Số tầng</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="row">
+                <div class="col col-4">
+                  <label class="label">Phòng ngủ</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="label">Phòng khách</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="label">Toilet</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-4">
+                  <label class="label">Nhà bếp</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="label">Hồ bơi</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="label">....</label>
+                  <label class="input">
+                  <input type="number">
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section>
+              <label class="label">Tiện nghi</label>
+              <div class="row">
+                <div class="col col-4">
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox" checked=""><i></i>Hồ bơi
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Điều hòa
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Phòng tập gym
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Sân vườn
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Đầy đủ nội thất
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Beatrice
+                  </label>
+                </div>
+                <div class="col col-4">
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Cassandra
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Clemencia
+                  </label>
+                  <label class="checkbox">
+                  <input type="checkbox" name="checkbox"><i></i>Desiderata
+                  </label>
+                </div>
+              </div>
+            </section>
+          </fieldset>
+
+          <footer>
+            <button type="submit" class="btn-u btn-u-default">Submit</button>
+            <button type="button" class="btn-u" onclick="window.history.back();">Back</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

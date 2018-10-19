@@ -20,7 +20,6 @@ Rails.application.routes.draw do
 
   scope module: "homes" do
     root "homepages#index"
-    resources :products
   end
 
   scope module: "users" do
