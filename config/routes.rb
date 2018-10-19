@@ -24,14 +24,16 @@ Rails.application.routes.draw do
 
   scope module: "users" do
     devise_scope :user do
-      get "login", to: "sessions#new"
-      get "logout", to: "sessions#destroy"
-      get "register", to: "registrations#new"
-      get "forgot_password", to: "passwords#new"
+      get "dang-nhap", to: "sessions#new", as: "login"
+      get "dang-xuat", to: "sessions#destroy", as: "logout"
+      get "dang-ky", to: "registrations#new", as: "register"
+      get "quen-mat-khau", to: "passwords#new", as: "forgot_password"
     end
-    get "dashboard", to: "dashboards#index"
-    get "profile", to: "profiles#show"
-    put "profile", to: "profiles#update"
+    get "trang-ca-nhan", to: "dashboards#index", as: "dashboard"
+    get "thay-doi-thong-tin", to: "profiles#show", as: "show_profile"
+    put "thay-doi-thong-tin", to: "profiles#update", as: "update_profile"
+    get "tao-moi-tin-rao", to: "products#new", as: "new_product"
+    get "quan-ly-tin-rao", to: "products#index", as: "products"
     resources :products
   end
 end

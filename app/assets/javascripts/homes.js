@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require ckeditor/init
+//= require turbolinks
+//= require dropzone
 //= require owl.carousel
 //= require plugin/ajax_errors
 //= require plugin/lodash.min
@@ -38,5 +39,9 @@ var ready = function(){
   App.initScrollBar();
   RegForm.initRegForm();
   $('.select2').select2();
+  $('.new-product-type').select2({
+    placeholder: "Loại bất động sản"
+  });
+  CKEDITOR.config.customConfig = '/assets/ckeditor/config.js';
 };
 $(document).on('turbolinks:load', ready);

@@ -103,6 +103,8 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dropzonejs-rails (0.8.2)
+      rails (> 3.1)
     dry-configurable (0.7.0)
       concurrent-ruby (~> 1.0)
     dry-container (0.6.0)
@@ -304,6 +306,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config
   devise
+  dropzonejs-rails
   faker
   figaro
   flag-icons-rails

@@ -2,16 +2,16 @@
   <%= image_tag "avatar.jpg", class: "img-responsive profile-img margin-bottom-20" %>
   <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
     <li class="list-group-item">
-      <a href="dashboard"><i class="fa fa-bar-chart-o"></i> Trang tổng quan</a>
+      <a href="<%= dashboard_path %>"><i class="fa fa-bar-chart-o"></i> Trang tổng quan</a>
     </li>
     <li class="list-group-item">
-      <a href="profile"><i class="fa fa-cog"></i> Cài đặt tài khoản</a>
+      <a href="<%= show_profile_path %>"><i class="fa fa-cog"></i> Thay đổi thông tin</a>
     </li>
     <li class="list-group-item">
-      <a href="page_profile_users.html"><i class="fa fa-pencil"></i> Tạo mới tin rao</a>
+      <a href="<%= new_product_path %>"><i class="fa fa-pencil"></i> Tạo mới tin rao</a>
     </li>
     <li class="list-group-item">
-      <a href="page_profile_projects.html"><i class="fa fa-history"></i> Quản lý tin rao</a>
+      <a href="<%= products_path %>"><i class="fa fa-history"></i> Quản lý tin rao</a>
     </li>
   </ul>
   <div class="panel-heading-v2 overflow-h">
