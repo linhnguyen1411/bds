@@ -1,4 +1,4 @@
-<div class="login-title text-center">
+<!-- <div class="login-title text-center">
   <h1><i class="gi gi-flash"></i> <strong>ProUI</strong><br><small>Please <strong>Login</strong> or <strong>Register</strong></small></h1>
 </div>
 <div class="block push-bit">
@@ -66,3 +66,46 @@
     </div>
   </div>
 <% end %>
+ -->
+ <div class="reg-block">
+  <div class="reg-block-header">
+    <h2>Đăng nhập</h2>
+    <ul class="social-icons text-center">
+      <li><a class="rounded-x social_facebook" data-original-title="Facebook" href="#"></a></li>
+      <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="#"></a></li>
+      <li><a class="rounded-x social_googleplus" data-original-title="Google Plus" href="#"></a></li>
+      <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="#"></a></li>
+    </ul>
+    <p>Đăng nhập bằng mạng xã hội hoặc nhập vào tài khoản của bạn.</p>
+  </div>
+  <%= form_for resource, as: resource_name, url: session_path(resource_name), html: {id: "form-user-session"} do |f| %>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control",
+          id: "user-login-email" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <%= f.password_field :password, autofocus: true, autocomplete: "email", class: "form-control",
+          id: "user-login-password" %>
+      </div>
+    </div>
+    <hr>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :remember_me %>
+        <p>Ghi nhớ tôi</p>
+      </label>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="text-center">
+          <button type="submit" class="btn btn-default btn-lock"> Login</button>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

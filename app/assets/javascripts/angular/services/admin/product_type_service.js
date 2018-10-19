@@ -15,22 +15,22 @@ function productTypeService(common) {
   return service;
 
   function showData(id) {
-    return common.ajaxCall("GET", "/admin/product_types/" + id);
+    return common.ajaxCall("GET", "/admins/product_types/" + id);
   }
 
   function getData() {
-    return common.ajaxCall("GET", "/admin/product_types");
+    return common.ajaxCall("GET", "/admins/product_types");
   }
 
   function createData(params){
-    return common.ajaxCall("POST", "/admin/product_types", params);
+    return common.ajaxCall("POST", "/admins/product_types", params);
   }
 
   function destroyData(id){
-    return common.ajaxCall("DELETE", "/admin/product_types/" + id);
+    return common.ajaxCall("DELETE", "/admins/product_types/" + id);
   }
 
   function updateData(id, params){
-   return common.ajaxCall("PUT", "/admin/product_types/" + id, params);
+   return common.ajaxCall("PUT", "/admins/product_types/" + id, params);
   }
 }

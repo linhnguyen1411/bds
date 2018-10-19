@@ -26,6 +26,7 @@
 //= require_tree ./homes
 //= require homes/datepicker.js
 //= require select2-full
+
 var ready = function(){
   App.init();
   App.initParallaxBg();
@@ -35,5 +36,6 @@ var ready = function(){
   });
   App.initCounter();
   App.initScrollBar();
+  RegForm.initRegForm();
 };
 $(document).on('turbolinks:load', ready);

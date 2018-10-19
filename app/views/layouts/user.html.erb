@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bds</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'homes', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'homes', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body ng-app="homeApp" class="header-fixed header-fixed-space-default" ng-strict-di
+    style="margin-bottom: 0px;">
+    <div class="wrapper">
+      <%= render "homes/layouts/header" %>
+      <div class="container content profile">
+        <div class="row">
+          <%= render "layouts/users/right_sidebar" %>
+          <%= yield %>
+        </div>
+      </div>
+      <%= render "homes/layouts/footer" %>
+    </div>
+    <%= javascript_include_tag 'ng_home' %>
+  </body>
+</html>
