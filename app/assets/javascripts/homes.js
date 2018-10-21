@@ -27,7 +27,9 @@
 //= require_tree ./homes
 //= require homes/datepicker.js
 //= require select2-full
-
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 var ready = function(){
   App.init();
   App.initParallaxBg();

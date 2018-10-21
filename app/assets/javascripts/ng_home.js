@@ -6,3 +6,4 @@
 //= require angular/app/home_app
 //= require_tree ./angular/services/home
 //= require_tree ./angular/controllers/home
+//= require_tree ./angular/directives/home

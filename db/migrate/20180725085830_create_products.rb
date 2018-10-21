@@ -17,6 +17,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.float :road_width
       t.integer :certificate
       t.datetime :expiration_date
+      t.integer :unit, default: 0
 
       t.timestamps
     end

@@ -32,3 +32,49 @@ vi:
       create:
         not_found: "Địa chỉ email không tồn tại."
         success: "Email hướng dẫn đặt lại mật khẩu đã được gửi đến địa chỉ emal mà bạn đã đăng ký. Vui lòng kiểm tra email của bạn để xem liệu bạn đã nhận được email từ chúng tôi hay chưa. Vui lòng liên hệ hỗ trợ nếu bạn không nhận được bất kỳ email nào."
+  product:
+    enums:
+      certificates:
+        home_ownership: "Sổ đỏ"
+        land_use_right: "Sổ hồng"
+        certificate: "Công chứng"
+      units:
+        negotiate: "Thỏa thuận"
+        million: "Triệu"
+        billion: "Tỷ"
+      statuses:
+        for_rent: "Cho thuê"
+        for_sale: "Cần Bán"
+        buy: "Cần Mua"
+  product_detail:
+    types:
+      floor: "Số tầng"
+      toilet: "Toilet"
+      livingroom: "Phòng khách"
+      kitchen: "Nhà bếp"
+      altar_room: "Phòng thờ"
+      bedroom: "Phòng ngủ"
+      built_in: "Năm xây dựng"
+  product_social:
+    types:
+      school: "Gần trường"
+      hospital: "Gần bệnh viện"
+      market: "Gần chợ"
+      supermarket: "Gần siêu thị"
+      park: "Gần công viên"
+      station: "Gần bến xe"
+      train_station: "Gần ga tàu"
+      police_station: "Gần công an"
+      kindergarten: "Gần nhà trẻ"
+      airport: "Gần sân bay"
+  product_extention:
+    types:
+      garage: "Chỗ để xe máy"
+      garage_car: "Chỗ để ô tô"
+      camera: "Hệ thống an ninh"
+      internet: "Internet"
+      tivi_cap: "Truyền hình cáp"
+      pool: "Hồ bơi"
+      fitness: Trung tâm thể dục"
+      terrace: "Sân thượng"
+      air_conditioner: "Máy điều hòa"
