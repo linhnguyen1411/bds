@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180927212757) do
+ActiveRecord::Schema.define(version: 20181020130341) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "email", default: "", null: false
@@ -78,25 +78,14 @@ ActiveRecord::Schema.define(version: 20180927212757) do
 
   create_table "product_details", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "product_id"
-    t.integer "bedroom"
-    t.integer "toilet"
-    t.integer "livingroom"
-    t.integer "kitchen"
-    t.boolean "furniture"
-    t.integer "floor"
-    t.float "floor_area", limit: 24
-    t.string "built_in"
+    t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "product_extensions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "product_id"
-    t.boolean "terrace"
-    t.boolean "waterfront"
-    t.string "view"
-    t.integer "garage"
-    t.integer "pool"
+    t.text "extensions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -104,6 +93,13 @@ ActiveRecord::Schema.define(version: 20180927212757) do
   create_table "product_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "product_id"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_socials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.integer "product_id"
+    t.text "socials"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

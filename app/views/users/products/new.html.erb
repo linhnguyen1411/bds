@@ -1,4 +1,4 @@
-<div class="col-md-9" ng-controller="ProductsController as vm">
+<div class="col-md-9" ng-controller="ProductsController as vm" ng-init="vm.init()" ng-cloak>
   <div class="tab-v1">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#home-1" data-toggle="tab">Thông tin cơ bản</a></li>
@@ -49,21 +49,14 @@
             <section>
               <label class="label">Hình thức</label>
               <div class="row">
-                <div class="col col-3">
-                  <label class="radio state-success">
-                  <input type="radio" name="radio" checked><i class="rounded-x"></i>Cần Mua
-                  </label>
-                </div>
-                <div class="col col-3">
-                  <label class="radio state-success">
-                  <input type="radio" name="radio"><i class="rounded-x"></i>Cần Bán
-                  </label>
-                </div>
-                <div class="col col-3">
-                  <label class="radio state-success">
-                  <input type="radio" name="radio"><i class="rounded-x"></i>Cho thuê
-                  </label>
-                </div>
+                <% Product.statuses.each do |key, value| %>
+                  <div class="col col-3">
+                    <label class="radio state-success">
+                    <input type="radio" name="radio" value="<%= key %>"><i class="rounded-x"></i>
+                      <%= t "product.enums.statuses.#{key}" %>
+                    </label>
+                  </div>
+                <% end %>
               </div>
               <div class="row">
                 <div class="col-md-4">
@@ -73,29 +66,24 @@
                   </label>
                 </div>
                 <div class="col-md-2">
-                  <!-- cai nay them vao enum e hi -->
                   <label class="label">Đơn vị</label>
                   <label class="select">
                     <select class="new-product-type">
                       <option value="0">Đơn vị (vnđ)</option>
-                      <option value="1">Thỏa thuận</option>
-                      <option value="2">Triệu</option>
-                      <option value="3" >Trăm triệu</option>
-                      <option value="4">Tỷ</option>
-                      <option value="5">Trăm tỷ</option>
-                      <option value="6">Nghìn tỷ</option>
+                      <% Product.units.each do |key, value| %>
+                        <option value="<%= value %>"><%= t "product.enums.units.#{key}" %></option>
+                      <% end %>
                     </select>
                   </label>
                 </div>
                 <div class="col-md-6">
-                  <!-- cai nay them vao enum e hi -->
                   <label class="label">Giấy tờ pháp lý</label>
                   <label class="select">
                     <select class="new-product-type">
                       <option value="0">Loại giấy tờ</option>
-                      <option value="1" >Sổ đỏ</option>
-                      <option value="2">Sổ hồng</option>
-                      <option value="3">Công chứng</option>
+                      <% Product.certificates.each do |key, value| %>
+                        <option value="<%= value %>"><%= t "product.enums.certificates.#{key}" %></option>
+                      <% end %>
                     </select>
                   </label>
                   </label>
@@ -110,8 +98,8 @@
               <div class="row">
                 <div class="col-md-4">
                   <label class="select">
-                    <select class="select2">
-                      <option value="0">Chọn thành phố/ tỉnh</option>
+                    <select class="select2 select-provinces" ng-model="vm.province_id" select2-search>
+                      <option value="" selected>Chọn thành phố/ tỉnh</option>
                       <option value="1">Alexandra</option>
                       <option value="2">Alice</option>
                       <option value="3">Anastasia</option>
@@ -193,125 +181,22 @@
           <fieldset>
             <section>
               <div class="row">
-                <div class="col col-4">
-                  <label class="label">Số tầng</label>
+                <div class="col-md-4" ng-repeat="(key, value) in vm.product_detail_options">
+                  <label class="label" ng-bind="vm.I18nProductDetailOptions[key]"></label>
                   <label class="input">
-                  <input type="number">
-                  </label>
-                </div>
-                <div class="col col-4">
-                  <label class="label">Phòng khách</label>
-                  <label class="input">
-                  <input type="number">
-                  </label>
-                </div>
-                <div class="col col-4">
-                  <label class="label">Phòng ngủ</label>
-                  <label class="input">
-                  <input type="number">
+                  <input type="number" ng-value="value">
                   </label>
                 </div>
               </div>
-              <div class="row">
-                <div class="col col-4">
-                  <label class="label">Toilet</label>
-                  <label class="input">
-                  <input type="number">
-                  </label>
-                </div>
-                <div class="col col-4">
-                  <label class="label">Nhà bếp</label>
-                  <label class="input">
-                  <input type="number">
-                  </label>
-                </div>
-                <div class="col col-4">
-                  <label class="label">Phòng thờ</label>
-                  <label class="input">
-                  <input type="number">
-                  </label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <label class="label">Năm xây dựng</label>
-              <label class="input">
-              <input type="text">
-              </label>
             </section>
             <section>
               <label class="label" style="color: blue">Nội thất</label>
               <div class="row">
                 <div class="col-md-12">
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox" checked=""><i></i>Bàn ăn
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Kệ ti vi
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Sàn gỗ/đá
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Bình nóng lạnh
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Bồn tắm
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Giường ngủ
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Trần thả
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Điều hòa
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Sofa phòng khách
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Tủ quần áo
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Tủ bếp
-                  </label>
-                  <label class="col-md-3 checkbox">
-                  <input type="checkbox" name="checkbox"><i></i>Bồn rửa mặt
-                  </label>
-                </div>
-              </div>
-            </section>
-            <section>
-              <label class="label" style="color: blue">Tiện ích kèm theo</label>
-              <div class="row">
-                <div class="col-md-12">
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox" checked=""><i></i>Chỗ để xe máy
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Hệ thống an ninh
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Truyền hình cáp
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Chỗ để ôtô
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Nhân viên bảo vệ
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Internet
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Trung tâm thể dục
-                  </label>
-                  <label class="checkbox col-md-3">
-                  <input type="checkbox" name="checkbox"><i></i>Hồ bơi
-                  </label>
-                  <label class="checkbox col-md-3">
-                  <input type="checkbox" name="checkbox"><i></i>Sân thượng
+                  <label class="col-md-3 checkbox"
+                    ng-repeat="(key, value) in vm.product_extention_options">
+                    <input type="checkbox" name="checkbox" ng-value="key" ng-checked="false"><i></i>
+                      {{vm.I18nProductExtentionOptions[key]}}
                   </label>
                 </div>
               </div>
@@ -320,41 +205,9 @@
               <label class="label" style="color: blue">Đặc điểm xã hội</label>
               <div class="row">
                 <div class="col-md-12">
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Khu dân trí cao
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox" checked=""><i></i>Gần trường
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần bệnh viện
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần công viên
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần công an
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần nhà trẻ
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần siêu thị
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần ga tàu
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần sân bay
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần bến xe
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Gần chợ
-                  </label>
-                  <label class="checkbox col-md-3">
-                    <input type="checkbox" name="checkbox"><i></i>Tiện kinh doanh
+                  <label class="checkbox col-md-3" ng-repeat="(key, value) in vm.product_social_options">
+                    <input type="checkbox" name="checkbox" ng-checked="false"><i></i>
+                      {{vm.I18nProductSocialOptions[key]}}
                   </label>
                 </div>
               </div>
@@ -369,7 +222,7 @@
     </div>
   </div>
 </div>
-<script>
+<!-- <script>
   $(document).ready(function(){
     Dropzone.autoDiscover = false;
     var dropzone = new Dropzone ("#image-upload", {
@@ -381,4 +234,4 @@
       }
     });
   });
-</script>
+</script> -->

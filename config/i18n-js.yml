@@ -1,0 +1,4 @@
+translations:
+  - file: "app/assets/javascripts/i18n/translations.js"
+    only: ["vi.product_detail.types", "vi.product_social.types", "vi.product_extention.types"]
+
