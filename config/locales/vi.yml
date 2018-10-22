@@ -39,7 +39,7 @@ vi:
         land_use_right: "Sổ hồng"
         certificate: "Công chứng"
       units:
-        negotiate: "Thỏa thuận"
+        deal: "Thỏa thuận"
         million: "Triệu"
         billion: "Tỷ"
       statuses:

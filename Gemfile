@@ -13,6 +13,7 @@ gem "mysql2", ">= 0.3.18", "< 0.5"
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'jquery-turbolinks'
 gem "font-awesome-rails"
 gem 'gmaps4rails'
 gem 'jquery-rails'
@@ -34,6 +35,7 @@ gem 'mini_magick'
 gem 'select2-rails', '~> 4.0', '>= 4.0.3'
 gem 'dropzonejs-rails'
 gem "i18n-js"
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

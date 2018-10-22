@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ckeditor/init
+//= require i18n
+//= require i18n.js
+//= require i18n/translations.js
+//= require jquery.turbolinks
 //= require turbolinks
+//= require homes/turbolinks-compatibility
 //= require dropzone
 //= require owl.carousel
 //= require plugin/ajax_errors
@@ -27,9 +31,7 @@
 //= require_tree ./homes
 //= require homes/datepicker.js
 //= require select2-full
-//= require i18n
-//= require i18n.js
-//= require i18n/translations
+
 var ready = function(){
   App.init();
   App.initParallaxBg();
@@ -44,6 +46,5 @@ var ready = function(){
   $('.new-product-type').select2({
     placeholder: "Loại bất động sản"
   });
-  CKEDITOR.config.customConfig = '/assets/ckeditor/config.js';
 };
 $(document).on('turbolinks:load', ready);

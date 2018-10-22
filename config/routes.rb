@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   scope module: "homes" do
     root "homepages#index"
+    get ":product_type_id/:id", to: "products#show", as: "product"
   end
 
   scope module: "users" do

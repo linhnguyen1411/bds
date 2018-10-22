@@ -1,6 +1,6 @@
 <div class="home-button">
-  <a class="label rounded label-danger" href="<%= new_product_path %>">Submit</a>
-  <a class="label rounded label-danger" href="<%= dashboard_path %>">Trang ca nhan</a>
+  <%= link_to "Đăng tin", new_product_path, class: "label rounded label-danger" %>
+  <%= link_to "Trang cá nhân", dashboard_path, class: "label rounded label-danger" %>
 </div>
 <div class="container" ng-controller="HomepagesController as vm" ng-init="vm.init()">
   <div class="row" style="padding-top: 30px;">
@@ -95,7 +95,7 @@
                   <a class="btn-more btn-green hover-effect" href="#">Bán villa</a>
                 </div>
                 <div class="caption">
-                  <h3><a class="hover-effect" href="#">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
+                  <h3><a class="hover-effect" href="nha-pho/ban-nha-duong-le-duan">Cần bán Villa đẹp nhất vịnh bắc bộ giá rẻ</a></h3>
                   <ul>
                     <li>Diện tích: 100m2</li>
                     <li>Giá: Liên hệ</li>
